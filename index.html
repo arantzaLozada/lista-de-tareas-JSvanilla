@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas con JS vanilla</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Tareas</h1>
+    </header>
+    <section>
+        <!-- <div><h2>Has completado x de x tareas</h2></div> -->
+        <div><input type="text" placeholder="busca una tarea" id="buscarTarea"></div>
+        <div>
+            <input type="text" placeholder="Agrega una tarea" id="insertValue">
+            <button onclick="AgregarTareas()" type="submit">+</button>
+        </div>
+        <ul class="list-ul" id="list-ul">
+            <!-- <li class="list-li">lista 1</li>
+            <li class="list-li">lista 2</li> -->
+            <!-- <div>
+                <span class="check">&#10004;</span>
+                <li class="list-li">lista 1</li>
+                <span class="delete">&#10006;</span>
+            </div>
+            <div>
+                <span class="check">&#10004;</span>
+                <li class="list-li">lista 2</li>
+                <span class="delete">&#10006;</span>
+            </div> -->
+            <!-- <div>
+                <span class="check">&#10004;</span>
+                <li class="list-li">lista 3</li>
+                <span class="delete">&#10006;</span>
+            </div> -->
+
+        </ul>
+        <ul id="local-ul"></ul>
+    </section>
+
+    <script src="JS/index.js"></script>
+</body>
+</html>
