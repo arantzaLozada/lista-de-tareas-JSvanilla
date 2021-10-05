@@ -54,6 +54,7 @@ function showItem() {
 showItem();
 
 //BOTON DE ELIMINAR
+//prueba
 
 // const eliminar = document.querySelector('.delete');
 
