@@ -37,12 +37,13 @@ function showItem() {
     list = localItem;
   }
 
+  //<span class="check">&#10004;</span>
+
   let html = '';
   let itemShow = document.querySelector('.list-ul');
   list.forEach((data, index) => {
     html += `
       <div class="content">
-        <span class="check">&#10004;</span>
         <li class="list-li">${data}</li>
         <span onclick="borrar(${index})" class="delete">&#10006;</span>
       </div>

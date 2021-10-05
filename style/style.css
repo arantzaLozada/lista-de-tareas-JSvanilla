@@ -1,16 +1,86 @@
-.content {
-  display: flex;
-  /* justify-content: space-evenly;
-  align-items: center; */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
+body {
+  height: 100vh;
+  padding: 15px;
+  background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: auto;
+}
+h1 {
+  letter-spacing: 2px;
+  color: #f8f9fa;
+  text-align: center;
+  font-size: 40px;
+}
+
+.TodoSearch-input {
+  letter-spacing: 1px;
+  color: #31446c;
+  font-size: 13px;
+  text-align: center;
+  outline: none;
+  width: 300px;
+  height: 30px;
+  border: 0;
+  /* border: 1px solid #7c7fd5; */
+  border-radius: 5px;
+  background-color: #480069;
+}
+.TodoSearch-input:focus {
+  color: #f8f9fa;
+
+  outline: none;
+}
+.TodoSearch-input::placeholder {
+  color: #f8f9fa77;
+}
+
+/* .content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;} */
 .list-ul {
+  padding: 15px;
   display: flex;
   flex-direction: column;
 }
 
+.content {
+  max-width: auto;
+  min-width: 400px;
+  padding: 12px;
+  background-color: #6525ab;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #6a58e0;
+  /* margin-top: 24px; */
+  box-shadow: 2px 5px 5px rgba(32, 35, 41, 0.15);
+}
+
 .list-li {
+  padding: 0px 10px 0px 10px;
   list-style: none;
-  margin: 10px;
+  color: #f8f9fac9;
+  /* display: flex; */
+  /* margin: 10px; */
 }
 .check {
   /* border: 1px solid black; */
@@ -27,7 +97,7 @@
   padding-left: 10px;
   cursor: pointer;
   margin-left: 10px;
-  color: red;
+  color: #f8f9fa;
 }
 
 .filteredOut {
@@ -36,4 +106,42 @@
 
 .d-flex {
   display: flex;
+}
+.add {
+  margin-top: 15px;
+}
+
+.agregarTareaInput {
+  letter-spacing: 1px;
+  color: #f8f9fa;
+  font-size: 13px;
+  text-align: center;
+  outline: none;
+  width: 300px;
+  height: 30px;
+  border: 0;
+  border-radius: 5px 0px 0px 5px;
+  background-color: #480069;
+}
+.agregarTareaInput:focus {
+  color: #f8f9fa;
+
+  outline: none;
+}
+.agregarTareaInput::placeholder {
+  color: #f8f9fa77;
+}
+
+.agregarTareaButton {
+  letter-spacing: 1px;
+  color: #f8f9fa;
+  font-size: 13px;
+  text-align: center;
+  outline: none;
+  width: 50px;
+  height: 30px;
+  border: 0;
+  border-radius: 0px 5px 5px 0px;
+  background-color: #216900;
+  cursor: pointer;
 }
