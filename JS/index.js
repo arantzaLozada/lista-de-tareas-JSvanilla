@@ -75,19 +75,59 @@ const filteredToDos = (userSearch) => {
 
   // console.log(listas.children);
   // console.log(Array.from(listas.children));
+  // const arryDeListas = Array.from(listas.children);
+
+  // let filterTodos = [];
+
+  // if (!userSearch.length >= 1) {
+  //   filterTodos = arryDeListas;
+  // } else {
+  //   filterTodos = arryDeListas.filter((task) => {
+  //      !task.textContent.toLocaleLowerCase().includes(userSearch)
+  //   });
+  // }
+
+
 
   Array.from(listas.children)
     .filter(
       (task) => !task.textContent.toLocaleLowerCase().includes(userSearch)
-    )
-    .forEach((filteredTask) => {
+       //queremos quedarnos con los <li> que NO coincidan con el término que el usuario está buscando
+    ).forEach((filteredTask) => {
       filteredTask.classList.add('filteredOut');
-      // filteredTask.classList.remove('d-flex');
+      filteredTask.classList.remove('list-ul');
     });
+
+
+    Array.from(listas.children)
+    .filter(task => task.textContent.includes(userSearch))
+    .forEach(filteredTask => {
+        filteredTask.classList.remove('filteredOut');
+        filteredTask.classList.add('content');
+    });
+
+
+    // filteredTask.classList.remove('filteredOut');
+    // filteredTask.classList.add('d-flex');
+
+
+    // .forEach((filteredTask) => {
+    //   if (filteredTask) {
+    //   //  filteredTask.classList.add('d-flex');
+    //   filteredTask.classList.add('filteredOut');
+    //   filteredTask.classList.remove('list-ul');
+
+    //   }else{
+    //     filteredTask.classList.remove('filteredOut');
+    //     filteredTask.classList.add('d-flex');
+    //   }
+    //   // filteredTask.classList.add('filteredOut');
+    //   // filteredTask.classList.remove('d-flex');
+    // });
 };
 
 const buscarTarea = document.getElementById('buscarTarea');
-buscarTarea.addEventListener('keyup', buscador);
+buscarTarea.addEventListener('input', buscador);
 
 function buscador(e) {
   const press = e.target.value.toLocaleLowerCase(); //el valor introducido
